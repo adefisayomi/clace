@@ -75,3 +75,54 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  /* font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 300; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#heeader-scroll-text {
+  text-align: right;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  
+  -moz-animation: my-animation 50s linear infinite;
+  -webkit-animation: my-animation 50s linear infinite;
+  animation: my-animation 50s linear infinite;
+
+ 
+}
+#heeader-scroll-text-container:hover + #heeader-scroll-text {
+  animation-play-state: paused;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

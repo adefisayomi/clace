@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
+import Products from "~/sections/products";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,7 +12,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <Button>This is a button</Button>
+      <Products />
     </div>
   );
 }
